@@ -288,7 +288,7 @@ export class Server<
   }
 
   public address() {
-    if (this.#status === ServerStatus.open) {
+    if (this.#listenSocket) {
       const address = this.#host;
       return {
         address,
